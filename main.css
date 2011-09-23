@@ -1,0 +1,134 @@
+html {
+	padding:0;
+	color:#000;
+	background:#c1c9ea url(repeat-x.gif) repeat-x scroll left top;
+}
+body {
+	background:url(repeat-y3.gif) repeat-y left top;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	width:790px;
+}
+#wrap {
+	background-image: url(top3.gif);
+	background-repeat: no-repeat;
+}
+#header {
+	text-align: right;
+	padding-right: 15px;
+	padding-top: 15px;
+	background: #C1C9EA url(repeat-x.gif) repeat-x scroll left top;
+	height: 65px;
+}
+#bottom {
+	background: url(repeat-y3.gif) repeat-y scroll left top;
+}
+h1 {
+	margin:0;
+}
+#nav {
+	padding:20px 10px 5px;
+	margin-left:15px;
+}
+#nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#nav li {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+#main {
+	float:left;
+	width:585px;
+	padding:10px;
+	margin-left:15px;
+	font-weight: normal;
+}
+h2 {
+	margin:0 0 1em;
+}
+#sidebar {
+	float:right;
+	width:150px;
+	padding:10px;
+}
+#footer {
+	clear:both;
+	padding:5px 10px;
+	color: #999999;
+}
+#footer a {
+	color: #999999;
+	text-decoration: none;
+}
+#footer p {
+	margin:0;
+}
+* html #footer {
+	height:1px;
+}
+tr:hover {
+	cursor: pointer;
+}
+.select {
+	width: 575px;
+	background-color: yellow;	
+    border: 2px solid #AAAAAA;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -khtml-border-radius: 12px;
+    border-radius: 12px;
+}
+.topcurve {
+	background: transparent url(top3.gif) no-repeat scroll left top;
+}
+.tweet{
+	width: 575px;
+	background-color: #FFD4FF;
+    border: 2px solid #AAAAAA;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -khtml-border-radius: 12px;
+    border-radius: 12px;
+}
+.tweetdate{
+	color: #999999;
+	font-weight: normal;
+}
+.tweeticon{
+	color: #9999AA;
+	margin: 5px;
+}
+.bottomcurve {
+	background: transparent url(bottom2.gif) no-repeat scroll left top;
+}
+.slider {
+	margin: 0.5em auto;
+	position: relative;
+	width: 450px;
+	height: 15px;
+	background: url(img/bg.png) 50% 50% repeat-x;
+}
+.slider img {
+	position: absolute;
+	top: 0px;
+	left: 85px;
+}
+.slider .left, .slider .right {
+	height: 12px;
+	width: 2px;
+	position: absolute;
+	top: 0px;
+}
+.slider .left {
+	left: 0px;
+	background: url(img/left.png) 0px 1px no-repeat;
+}
+.slider .right {
+	right: 0px;
+	background: url(img/right.png) 0px 1px no-repeat;
+}

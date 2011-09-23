@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict //EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Untitled Page</title>
+		<style>
+			td {
+				width: 2em;
+				height: 2em;
+				padding: 2em;
+				text-align: center;	
+			}
+			tr:hover {
+				cursor: pointer;
+				background-color: whitesmoke;
+			}
+			.select {
+				background-color: yellow;	
+			}
+		</style>
+		<script type="text/javascript">
+var td1 = null;
+var td2 = null;
+
+function highlight(obj) {
+	if (td1 || td2) {
+		td1.className = null;
+		td2.className = null;
+	}
+
+	obj.cells[0].className = "select";
+	obj.cells[1].className = "select";
+	
+	td1 = obj.cells[0];
+	td2 = obj.cells[1];
+}
+
+</script>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<table>
+			<tr onclick="highlight(this);">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr onclick="highlight(this);">
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+			<tr onclick="highlight(this);">
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

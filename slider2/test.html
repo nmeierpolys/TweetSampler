@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd"> 
+<html> 
+<head> 
+        <title>frequency decoder - accessible, unobtrusive slider demo</title> 
+        <meta http-equiv="Content-Type"         content="text/html; charset=iso-8859-1" /> 
+        <meta name="author"                     content="frequency decoder" /> 
+        <meta name="description"                content="An unobtrusive javascript that turns any text input or selectlist into a keyboard-accessible slider control" /> 
+        <meta http-equiv="imagetoolbar"         content="no" /> 
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="./slider.css" /> 
+        <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" /> 
+<style type="text/css" media="screen"> 
+div.extraclass
+        {
+        width:15em;
+        float:left;
+        }
+
+input
+        {
+        border:1px solid #ccc;
+        border-top:1px solid #888;
+        border-left:1px solid #888;
+        width:2em;
+        margin-left:0.2em;
+        }
+</style> 
+
+<![endif]--> 
+<script type="text/javascript" src="./slider.js"></script> 
+<script type="text/javascript"> 
+//<![CDATA[
+ 
+// Preloading the images used for the slider handle
+var imgList = ["slider-disabled.png", "slider-disabled-1.png", "slider.png", "slider-1.png"];
+var preloadImg = []
+for(var i = 0, imgSrc; imgSrc = imgList[i]; i++) {
+        preloadImg[i] = new Image();
+        preloadImg[i].src = "./" + imgSrc;
+};
+ 
+// Create the demo callback function shared between the first three sliders
+function updateColor() {
+        var r = parseInt(document.getElementById('slider-r').value, 10) || 0;
+        var g = parseInt(document.getElementById('slider-g').value, 10) || 0;
+        var b = parseInt(document.getElementById('slider-b').value, 10) || 0;
+ 
+        var cbox = document.getElementById("colorBox");
+        if(cbox) cbox.style.backgroundColor = "rgb("+r+ ","+g+","+b+")";
+        var res = document.getElementById("hexValue");
+        if(res) res.innerHTML = "#" + toHex(r) + toHex(g) + toHex(b);
+}
+function setUpVerticalSliderOutput() {
+        // Dynamically create the paragraph that will be updated within the callback
+        var p = document.createElement("p");
+        // Append it to the div
+        document.getElementById("verticalWrapper").appendChild(p);
+        // Stop IE memory leaks
+        p = null;
+ 
+        // Call the callback immediately in order to update the paragraph info
+        myObject.callback();
+}
+ 
+fdSliderController.addEvent(window, 'load', setUpVerticalSliderOutput);
+ 
+fdSliderController.addEvent(window, 'load', updateColor);
+</script> 
+</head> 
+<body> 
+    
+        <dd><input name="slider1" id="slider-r" type="text" title="Range: 0 - 255" class="fd_range_0_255 fd_classname_extraclass fd_callback_updateColor" value="0" /></dd> 
+        <div id="test" style="background-color: rgb(128, 128, 128);">Here</div>
+      <div id="verticalWrapper"> 
+        <input name="slider4" id="slider-v" type="text" title="Range: -255 - 255" class="fd_tween fd_range_-255_255 fd_hide_input fd_callback_myObject-callback fd_vertical fd_classname_verticalclass" value="0" /> 
+      </div> 
+</body> 
+</html> 
